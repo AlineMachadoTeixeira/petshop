@@ -5,8 +5,9 @@ import Layout from "@/components/layout"; // Importando o Layout da pasta src - 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Layout />
-      <Component {...pageProps} />;
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

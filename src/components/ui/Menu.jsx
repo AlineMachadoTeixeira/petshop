@@ -1,14 +1,28 @@
 import Link from "next/link";
 import styled from "styled-components"; // puxou do const StyledNav linha 15
 
+import { usePathname } from "next/navigation"; //para fazer o link ativo  na const linkAtivo
+
 export default function Menu() {
+  const linkAtivo = usePathname();
   return (
     //Antes era <nav> mudamos por causa do css
     <StyledNav>
-      <Link href="/">Blog</Link>
-      <Link href="/produtos">Produto</Link>
-      <Link href="/sobre">Sobre</Link>
-      <Link href="/contato">Contato</Link>
+      <Link className={linkAtivo === "/" ? "ativo" : ""} href="/">
+        Blog
+      </Link>
+      <Link
+        className={linkAtivo === "/produtos" ? "ativo" : ""}
+        href="/produtos"
+      >
+        Produto
+      </Link>
+      <Link className={linkAtivo === "/sobre" ? "ativo" : ""} href="/sobre">
+        Sobre
+      </Link>
+      <Link className={linkAtivo === "/contato" ? "ativo" : ""} href="/contato">
+        Contato
+      </Link>
     </StyledNav>
   );
 }
@@ -37,6 +51,10 @@ const StyledNav = styled.nav`
     &:hover,
     &:focus {
       background-color: var(--cor-primaria-fundo-hover);
+    }
+
+    a.ativo {
+      background-color: red;
     }
 
     @media screen and (min-width: 700px) {

@@ -38,3 +38,7 @@ n dev
   compiler: {
   styledComponents: true,
   } logo abaixo do reactStrictMode: true,
+
+import {usePa} from "next/navagati"
+
+const pathaname = usePathname

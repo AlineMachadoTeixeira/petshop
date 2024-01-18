@@ -57,4 +57,20 @@ const StyledHeader = styled.header`
   h1 a:focus {
     color: var(--cor-secundaria-hover);
   }
+
+  /* Mini exercício:
+  Crie aqui uma media query para a partir de 700px e faça as seguintes mudanças:
+  
+  - Na div do cabeçalho, exibir o conteúdo lado a lado (lembrando que ali você tem o flex já sendo usado)	
+  - Tamanho da fonte do PetShop aumentar para 2rem */
+
+  @media screen and (min-width: 700px) {
+    h1 a {
+      font-size: 2rem;
+    }
+
+    div {
+      flex-direction: row;
+    }
+  }
 `;

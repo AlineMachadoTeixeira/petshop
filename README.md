@@ -22,3 +22,10 @@
 - Map, Filter
 - Manipulação de Formulário
 - Publicação na Vercel e na Netlify
+
+## Como fazer a instalação do `styled-components` para usar o CSS sem ser o global
+
+- Para aplicar o styled-components primeiro pare o terminal com ctrl C e digite o de baixo e dar entre
+- digite no terminal `npm install styled-components`
+- verifica ser apareceu o arquivo package.json
+- depois fazer o npm run dev para voltar o arquivo que foi parado

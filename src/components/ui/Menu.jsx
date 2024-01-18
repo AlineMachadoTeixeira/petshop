@@ -33,5 +33,10 @@ const StyledNav = styled.nav`
       border-top-left-radius: var(--borda-arredondada);
       border-bottom-left-radius: var(--borda-arredondada);
     }
+
+    &:hover,
+    &:focus {
+      background-color: var(--cor-primaria-fundo-hover);
+    }
   }
 `;

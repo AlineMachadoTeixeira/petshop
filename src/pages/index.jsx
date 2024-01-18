@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styled from "styled-components";
 
 export default function Home() {
   return (
@@ -15,9 +16,16 @@ export default function Home() {
         />
         {/* meta name="Keywords" é tipo uma # para encontrar o site */}
       </Head>
-      <section>
+      {/* //Antes era <section> mudamos por causa do css */}
+      <StyledHome>
         <h2>Pet Notícias</h2>
-      </section>
+      </StyledHome>
     </>
   );
 }
+
+const StyledHome = styled.section`
+  h2::before {
+    content: "📰";
+  }
+`;

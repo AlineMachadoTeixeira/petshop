@@ -60,6 +60,6 @@ const StyledNav = styled.nav`
   }
 
   a.ativo {
-    background-color: #783634;
+    background-color: #fa7592;
   }
 `;

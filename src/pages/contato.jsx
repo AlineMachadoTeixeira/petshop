@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styled from "styled-components";
 
 export default function Contato() {
   return (
@@ -11,9 +12,16 @@ export default function Contato() {
         />
         <meta name="Keywords" content="petshop, contato" />
       </Head>
-      <section>
+      {/* //Antes era <section> mudamos por causa do css */}
+      <StyledContato>
         <h2>Fale Conosco</h2>
-      </section>
+      </StyledContato>
     </>
   );
 }
+
+const StyledContato = styled.section`
+  h2::before {
+    content: "💌";
+  }
+`;

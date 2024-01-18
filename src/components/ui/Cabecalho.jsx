@@ -41,4 +41,20 @@ const StyledHeader = styled.header`
     align-items: center;
     gap: 0.5rem;
   }
+
+  img {
+    margin-right: 0.5rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+
+  h1 a:hover,
+  h1 a:focus {
+    color: var(--cor-secundaria-hover);
+  }
 `;

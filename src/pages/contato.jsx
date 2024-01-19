@@ -57,42 +57,39 @@ const StyledContato = styled.section`
   }
 
   // Início Formulário
-  form {
-    /* max-width: 70%; */
-    width: 70%;
-    margin: 0 auto;
+
+  form > div {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    & label {
+      font-weight: bold;
+      width: 30%;
+      display: flex;
+      align-items: center;
+    }
+
+    & input,
+    & textarea {
+      width: 70%;
+      border: none;
+      box-shadow: var(--sombra-box);
+      padding: 0.5rem;
+    }
+
+    & button {
+      background-color: var(--cor-logo);
+      color: var(--cor-primaria);
+      padding: 1rem;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--cor-primaria-fundo-hover);
+      }
+    }
   }
 
-  div {
-    margin-bottom: 10px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    padding: 8px;
-    box-shadow: var(--sombra-box);
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-  }
-
-  button {
-    background-color: var(--cor-logo);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: var(--cor-primaria-fundo-hover);
-  }
   // Fim Formulário
 `;

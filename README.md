@@ -32,14 +32,10 @@ n dev
 - digite no terminal `npm install styled-components`
 - verifica ser apareceu o arquivo package.json
 - depois fazer o npm run dev para voltar o arquivo que foi parado
-- Após instalar o `styled-components`, ative o suporte à compilação dele pelo Next.js `next.config.js` se não dar erro no CSS
-- siga os passo a passo a baixo para não dar o erro:
+- Após instalar o `styled-components`, ative o suporte à compilação dele pelo Next.js `next.config.js` - Se não fazer isso dar erro no CSS
+- Siga os passos a passos a baixo para não dar o erro:
 - 1° --> Vai no arquivo next.config.js
 - 2° --> digite isso:
   compiler: {
   styledComponents: true,
   } logo abaixo do reactStrictMode: true,
-
-import {usePa} from "next/navagati"
-
-const pathaname = usePathname

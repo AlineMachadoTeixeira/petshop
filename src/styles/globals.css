@@ -6,7 +6,8 @@
 }
 /* Variáveis CSS */
 :root {
-  --cor-primaria-fundo: #0b0a3f;
+  /* --cor-primaria-fundo: #0b0a3f;   */
+  --cor-primaria-fundo: #4682b4;
   /* --cor-primaria-fundo-hover: #030226; */
   --cor-primaria-fundo-hover: #ffc0cb;
   --cor-primaria: #f2f2f2;

@@ -55,7 +55,7 @@ const StyledListaPosts = styled.div`
 
       &:hover,
       &:focus {
-        color: #4682b4;
+        color: var(--cor-logo);
       }
     }
   }
@@ -63,6 +63,16 @@ const StyledListaPosts = styled.div`
   article:hover {
     cursor: pointer;
     transform: scale(1.05);
+  }
+
+  @media screen and (min-width: 500px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    article {
+      width: 49%;
+    }
   }
 `;
 

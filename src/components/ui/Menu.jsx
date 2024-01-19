@@ -60,6 +60,6 @@ const StyledNav = styled.nav`
   }
 
   a.ativo {
-    background-color: var(--cor-logo);
+    background-color: var(--cor-primaria-fundo-hover);
   }
 `;

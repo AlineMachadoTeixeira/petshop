@@ -9,6 +9,7 @@ n dev
 - node espaço +nome da pasta --> ver o resultado que está na pasta com console.log
 - cd.. --> volta algumas pastas ou uma pasta
 - ctrl +C --> para parar o CMD ou qualquer
+- atalho windows mais .(ponto) trás opções de Ícones/emojis
 
 # PetShop: projeto Next.js
 

@@ -17,7 +17,7 @@ export default function Produtos() {
         <h2>Conheça nossos Produtos</h2>
 
         <article>
-          <h3>Ração para cachorro</h3>
+          <h3>Ração</h3>
           <p>
             Você sabe qual é a melhor ração para cachorro? Mais do que isso,
             você sabe como as características individuais do seu pet influenciam
@@ -40,7 +40,7 @@ export default function Produtos() {
         </article>
 
         <article>
-          <h3>Remédio para cachorro</h3>
+          <h3>Remédio</h3>
           <p>
             Oferecer remédio para cachorro pode significar a diferença entre
             recuperar a saúde do seu melhor amigo peludo ou colocá-lo em uma

@@ -8,7 +8,7 @@
 :root {
   --cor-primaria-fundo: #0b0a3f;
   /* --cor-primaria-fundo-hover: #030226; */
-  --cor-primaria-fundo-hover: #fa7592;
+  --cor-primaria-fundo-hover: #ffc0cb;
   --cor-primaria: #f2f2f2;
   --cor-primaria-hover: #ebebeb;
   --cor-secundaria-fundo: #4ba3c3;
@@ -17,6 +17,7 @@
   --cor-secundaria-hover: #e2e2eb;
   --sombra-box: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   --borda-arredondada: 0.5rem;
+  --cor-logo: #fa7592;
 }
 html {
   font-size: 16px;

@@ -40,7 +40,31 @@ export default function Home() {
   );
 }
 
-const StyledListaPosts = styled.div``;
+const StyledListaPosts = styled.div`
+  article {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--sombra-box);
+    border-radius: var(--borda-arredondada);
+    transition: transform 200ms;
+
+    & a {
+      text-decoration: none;
+      color: black;
+
+      &:hover,
+      &:focus {
+        color: #4682b4;
+      }
+    }
+  }
+
+  article:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+`;
 
 const StyledHome = styled.section`
   h2::before {

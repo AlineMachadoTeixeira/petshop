@@ -3,7 +3,34 @@ import styled from "styled-components";
 
 import ListaPosts from "@/components/ListaPosts";
 
+import { useEffect, useState } from "react"; //importação da linha 8 useState() e useEffect linha 12;. Primeiro escreve useState
+
 export default function Home() {
+  //Passa a passo do react-fundamento na parte  produto
+  const [listaDePosts, SetListaDePosts] = useState([]);
+
+  useEffect(() => {
+    const carregarDados = async () => {
+      try {
+        const resposta = await fetch(`http://10.20.46.34:2112/posts`);
+
+        if (!resposta.ok) {
+          throw new Error(
+            `Erro requisição: ${resposta.status} - ${resposta.statusText}`
+          );
+        }
+
+        const dados = await resposta.json();
+
+        SetListaDePosts(dados);
+      } catch (error) {
+        console.error("Houve um erro: " + error);
+      }
+    };
+
+    carregarDados();
+  }, []);
+
   return (
     <>
       <Head>
@@ -22,7 +49,7 @@ export default function Home() {
       <StyledHome>
         <h2>Pet Notícias</h2>
         {/* arrayPosts vem da pasta api / array-posts */}
-        <ListaPosts posts={[]} />
+        <ListaPosts posts={listaDePosts} />
       </StyledHome>
     </>
   );

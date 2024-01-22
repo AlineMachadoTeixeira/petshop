@@ -47,19 +47,16 @@ n dev
 - para ter certeza que instalou abra node.js command prompt e digite `json-server --version` é para aparecer 1.0.0-alpha.21
 - depois jogamos a pasta db.json na raiz do visual . A pasta db.json o professor passou pronta.
 
-## 11-usando-json-server-como-fake-api
+## Branch 11-usando-json-server-como-fake-api
 
-### Etapa (Faça tudo usando o Node.js Command Prompt)
+### Etapas (faça tudo usando o Node.js Command Prompt)
 
-## Branch 11
+1. Instalação global do `json-server`: `npm install -g json-server`
+2. Colocação do arquivo `db.json` na raíz do projeto (este arquivo funcionará como um banco de dados para a API)
+3. Pegar o IP da máquina usando `ipconfig`
+4. Adicionar um script npm no `package.json` com a seguinte configuração:
 
-json-server --host 10.20.46.28 db.json --port 2112
-
-json-server --watch db.json
-
-npm install -g
-
-json-server --version
+`"api" : "json-server --host IP.DA.SUA.MAQUINA db.json --port NÚMERO"`
 
 ---
 

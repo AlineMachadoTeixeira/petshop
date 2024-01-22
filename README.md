@@ -46,3 +46,21 @@ n dev
 - digite no terminal `npm install -g json-server`
 - para ter certeza que instalou abra node.js command prompt e digite `json-server --version` é para aparecer 1.0.0-alpha.21
 - depois jogamos a pasta db.json na raiz do visual . A pasta db.json o professor passou pronta.
+
+#### Abri cmd pelo NODE.js
+
+cd espaço botão direito vai na pasta que você quer abrir com o botão direito Copiar endereço como texto
+vai no terminal node.js
+coloca cd e aperte botão direito do mouse
+
+digite json-server --watch db.json
+
+para saber se o node está instalado json-server --version tem que aparecer 1.0.0-alpha.21
+
+ipconfig -- para descobrir o numero IP do seu computador
+
+json-server --host 10.20.46.34 db.json --port 2112
+
+http://10.20.46.34:2112/posts
+
+depois que mudar a pasta package.json na parte de scripts na ultima linha digite "api": "json-server --host 10.20.46.34 db.json --port 2112" depois no terminal digite no terminal do node `npm run api`

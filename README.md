@@ -57,7 +57,7 @@ digite json-server --watch db.json
 
 para saber se o node está instalado json-server --version tem que aparecer 1.0.0-alpha.21
 
-ipconfig -- para descobrir o numero IP do seu computador
+- ipconfig -- para descobrir o numero IP do seu computador
 
 json-server --host 10.20.46.34 db.json --port 2112
 

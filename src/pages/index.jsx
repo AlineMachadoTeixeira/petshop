@@ -22,7 +22,7 @@ export default function Home() {
       <StyledHome>
         <h2>Pet Notícias</h2>
         {/* arrayPosts vem da pasta api / array-posts */}
-        <ListaPosts posts={[{ id: 1, titulo: "Teste", subtitulo: "teste" }]} />
+        <ListaPosts posts={[]} />
       </StyledHome>
     </>
   );

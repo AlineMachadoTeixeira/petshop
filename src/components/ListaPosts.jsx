@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 /*  ListaPosts({ posts }) esse posts é um nome que escolhemos podemos colocar array / lista e etc  */
 export default function ListaPosts({ posts }) {
+  /* Se não houver posts (ou seja, posts está vazio/zerado), em vez de retornar artigos com o map, retorn uma mensagem provisória para usuário. */
+  if (posts.length === 0)
+    return <h3 style={{ textAlign: "center" }}>Ainda não há posts!</h3>;
+
   return (
     <StyledListaPosts>
       {/* Antes o posts.map era arrayPosts.map  e estava na index e passamos para cá por causa do desafio*/}

@@ -39,3 +39,10 @@ n dev
   compiler: {
   styledComponents: true,
   } logo abaixo do reactStrictMode: true,
+
+#### Instalando Json Server server para simular uma API
+
+- Primeiro pare o terminar depois
+- digite no terminal `npm install -g json-server`
+- para ter certeza que instalou abra node.js command prompt e digite `json-server --version` é para aparecer 1.0.0-alpha.21
+- depois jogamos a pasta db.json na raiz do visual . A pasta db.json o professor passou pronta.

@@ -47,6 +47,50 @@ n dev
 - para ter certeza que instalou abra node.js command prompt e digite `json-server --version` é para aparecer 1.0.0-alpha.21
 - depois jogamos a pasta db.json na raiz do visual . A pasta db.json o professor passou pronta.
 
+## 11-usando-json-server-como-fake-api
+
+### Etapa (Faça tudo usando o Node.js Command Prompt)
+
+## Branch 11
+
+json-server --host 10.20.46.28 db.json --port 2112
+
+json-server --watch db.json
+
+npm install -g
+
+json-server --version
+
+---
+
+- para instalar o json-server:
+
+```cmd
+<!-- para instalar globalmente para projetos futuros a versão deste projeto 1.0.0 alpha.21 -->
+npm install -g json-server
+```
+
+- para executar recomendado o node:
+
+```cmd
+json-server --watch nomeDoArquivoDesejado <!-- neste caso db.json -->
+```
+
+- para desconfigurar da porta padrão:
+
+```cmd
+<!-- use o ipconfig -->
+json-server --host ipDaMaquina nomeDoArquivoDesejado  --port numeroDaPorta
+```
+
+para facilitar a vida no package.json e crie um script novo e coloque o a linha de comando acima
+
+```json
+"scripts": {
+    "api": "json-server --host ipDaMaquina nomeDoArquivoDesejado  --port numeroDaPorta"
+  }
+```
+
 #### Abri cmd pelo NODE.js
 
 cd espaço botão direito vai na pasta que você quer abrir com o botão direito Copiar endereço como texto

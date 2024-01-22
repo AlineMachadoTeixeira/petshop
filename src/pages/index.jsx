@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
-import arrayPosts from "./api/array-posts";
+
 import ListaPosts from "@/components/ListaPosts";
 
 export default function Home() {

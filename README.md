@@ -108,4 +108,7 @@ depois que mudar a pasta package.json na parte de scripts na ultima linha digite
 
 Quando já fez o passo a passo de cima e só quer abrir o arquivo digite no node.js na pasta que quer abrir `npm run api` e no terminal normal digite `npm run dev`
 
-##### Site `https://unminify.com/#google_vignette` ele arruma o código fonte da página.
+##### Site
+
+`https://unminify.com/#google_vignette` ele arruma o código fonte da página.
+`https://pagespeed.web.dev/` ele você ver o desempenho do site que criou

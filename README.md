@@ -108,6 +108,16 @@ depois que mudar a pasta package.json na parte de scripts na ultima linha digite
 
 Quando já fez o passo a passo de cima e só quer abrir o arquivo digite no node.js na pasta que quer abrir `npm run api` e no terminal normal digite `npm run dev`
 
+### Ducumentação oficial sobre SSR
+
+https://nextjs.org/docs/pages/building-your-application/data-fetching
+
+`getStaticProps`: executada no lado do servidor (SSR - Server Side Rendering), portanto logs, erros, lógica, ação/comandos NÃO aparecem para o usuário (mas aparecem no terminal para o programador(a)).
+
+Na maioria dos casos usaremos `getStaticProps` para este tipo de processamento em que os dados são consumidos (Data Fetching) através da uma API, que já que esta função tem uma perfomance melhor para fazer o processamento apenas no momento da requisição.
+
+Também há a função `getServerSideProps` que pode ser útil para páginas cujos dados mudam frequentemente ou são diferentes para cada usuário (como no caso de uso de dados de geolocalização).
+
 ##### Site
 
 `https://unminify.com/#google_vignette` ele arruma o código fonte da página.

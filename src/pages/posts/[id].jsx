@@ -21,4 +21,8 @@ export default function Post() {
   );
 }
 
-const StyledPost = styled.article``;
+const StyledPost = styled.article`
+  h2::before {
+    content: "📑 ";
+  }
+`;

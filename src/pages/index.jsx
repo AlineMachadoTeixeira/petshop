@@ -4,6 +4,7 @@ import styled from "styled-components";
 import ListaPosts from "@/components/ListaPosts";
 
 import { useState } from "react"; //importação da linha 8 useState(). Primeiro escreve useState
+import serverApi from "./api/server"; // usamos na linha 16
 
 /* EXECUTADA NO SERVIDOR/BACK-END 
             Função getStaticProps 
@@ -12,7 +13,7 @@ export async function getStaticProps() {
   console.log("Código de servidor (não aparece no cliente)...");
 
   try {
-    const resposta = await fetch(`http://10.20.46.34:2112/posts`);
+    const resposta = await fetch(`${serverApi}/posts`); // antes era `http://10.20.46.34:2112/posts`
     const dados = await resposta.json();
 
     if (!resposta.ok) {

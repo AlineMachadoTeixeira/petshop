@@ -107,3 +107,5 @@ http://10.20.46.34:2112/posts
 depois que mudar a pasta package.json na parte de scripts na ultima linha digite "api": "json-server --host 10.20.46.34 db.json --port 2112" depois no terminal digite no terminal do node `npm run api`
 
 Quando já fez o passo a passo de cima e só quer abrir o arquivo digite no node.js na pasta que quer abrir `npm run api` e no terminal normal digite `npm run dev`
+
+##### Site `https://unminify.com/#google_vignette` ele arruma o código fonte da página.

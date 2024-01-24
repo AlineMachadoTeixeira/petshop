@@ -122,3 +122,13 @@ Também há a função `getServerSideProps` que pode ser útil para páginas cuj
 
 `https://unminify.com/#google_vignette` ele arruma o código fonte da página.
 `https://pagespeed.web.dev/` ele você ver o desempenho do site que criou
+
+## Branch 14
+
+### Recursos necessários
+
+- Pages/Rotas **dinâmicas** utilizado subpasta (posts) e arquivo nomeado com colchetes indicando o nome(s) do(s) parâmetros. No caso, foi criado o `[id].jsx`
+
+- `getStaticProps`: necessário para carregar os dados da API de acordo com o parâmetro (usando a prop `{params}`) e gerar o HTML via SSR
+
+- `getStaticPaths`: necessário para gerar os caminhos dinâmicos no momento do acesso à página.

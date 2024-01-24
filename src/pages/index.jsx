@@ -49,6 +49,18 @@ export default function Home({ posts, categorias }) {
   //Passa a passo do react-fundamento na parte  produto
   const [listaDePosts, SetListaDePosts] = useState(posts);
 
+  //função para filtrar as categorias quando aperta botão da linha 85 que está StyledCategorias
+  const filtrar = (event) => {
+    const categoriaEscolhida = event.currentTarget.innerText;
+
+    // esse posts é da função Home
+    const novaListaDePosts = posts.filter(
+      (post) => post.categoria === categoriaEscolhida
+    );
+
+    SetListaDePosts(novaListaDePosts);
+  };
+
   return (
     <>
       <Head>
@@ -67,12 +79,16 @@ export default function Home({ posts, categorias }) {
       <StyledHome>
         <h2>Pet Notícias</h2>
 
-        <StyledBotao>
+        <StyledCategorias>
           {/* key={indice} é para parar de dar erro no console do navegador */}
           {categorias.map((categoria, indice) => {
-            return <button key={indice}>{categoria}</button>;
+            return (
+              <button onClick={filtrar} key={indice}>
+                {categoria}
+              </button>
+            );
           })}
-        </StyledBotao>
+        </StyledCategorias>
 
         {/* arrayPosts vem da pasta api / array-posts */}
         <ListaPosts posts={listaDePosts} />
@@ -87,10 +103,10 @@ const StyledHome = styled.section`
   }
 `;
 
-const StyledBotao = styled.div`
+const StyledCategorias = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
 
   button {
     background-color: var(--cor-logo);
@@ -99,7 +115,8 @@ const StyledBotao = styled.div`
     border: none;
     cursor: pointer;
     box-shadow: var(--sombra-box);
-    border-radius: 5px;
+    border-radius: var(--borda-arredondada);
+    margin: 10px;
 
     &:hover {
       background-color: var(--cor-primaria-fundo-hover);

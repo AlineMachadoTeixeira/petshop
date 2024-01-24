@@ -49,7 +49,7 @@ export default function Home({ posts, categorias }) {
   //Passa a passo do react-fundamento na parte  produto
   const [listaDePosts, SetListaDePosts] = useState(posts);
 
-  //Fazer o botão Limpar filtro sumir
+  //Fazer o botão Limpar filtro sumir / só aparecer quando clicamos no botão categorias(Bem-estar Comportamento) ai foi feito a const limparfiltro
   const [filtroAtivo, setFiltroAtivo] = useState(false);
 
   //função para filtrar as categorias(Bem-estar Comportamento) quando aperta botão da linha 85 que está StyledCategorias
@@ -63,7 +63,18 @@ export default function Home({ posts, categorias }) {
       (post) => post.categoria === categoriaEscolhida
     );
 
+    //Fazendo o botão Limpar filtro aparecer  -- Sinalizando o state como filtro ativo (true)
+    setFiltroAtivo(true);
+
     SetListaDePosts(novaListaDePosts);
+  };
+
+  const limparFiltro = () => {
+    //Fazendo o botão Limpar filtro sumir -- Sinalizando o state como filtro inativo (false)
+    setFiltroAtivo(false);
+
+    //Atualizando o state da listaDePosts para os posts originais
+    SetListaDePosts(posts);
   };
 
   return (
@@ -95,7 +106,11 @@ export default function Home({ posts, categorias }) {
           })}
 
           {/* //Botão pata Limpeza do filtro de categoria  do botão de cima */}
-          {filtroAtivo && <button className="limpar">Limpar filtro</button>}
+          {filtroAtivo && (
+            <button onClick={limparFiltro} className="limpar">
+              Limpar filtro
+            </button>
+          )}
         </StyledCategorias>
 
         {/* arrayPosts vem da pasta api / array-posts */}
@@ -134,7 +149,7 @@ const StyledCategorias = styled.div`
   }
 
   .limpar {
-    background-color: #6496c5;
+    background-color: #5e6976;
     &:hover {
       background-color: slategrey;
     }

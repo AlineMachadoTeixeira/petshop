@@ -49,6 +49,9 @@ export default function Home({ posts, categorias }) {
   //Passa a passo do react-fundamento na parte  produto
   const [listaDePosts, SetListaDePosts] = useState(posts);
 
+  //Fazer o botão Limpar filtro sumir
+  const [filtroAtivo, setFiltroAtivo] = useState(false);
+
   //função para filtrar as categorias(Bem-estar Comportamento) quando aperta botão da linha 85 que está StyledCategorias
   const filtrar = (event) => {
     /* Atenção: utilize  textContent  em vez de innerText, pois textContent captura o texto real do HTML/JSX sem levar em consideração estilo CSS. mudamos no css o  text-transform: capitalize a primeira letra era minuscula e deixamos maiuscula*/
@@ -90,6 +93,9 @@ export default function Home({ posts, categorias }) {
               </button>
             );
           })}
+
+          {/* //Botão pata Limpeza do filtro de categoria  do botão de cima */}
+          {filtroAtivo && <button className="limpar">Limpar filtro</button>}
         </StyledCategorias>
 
         {/* arrayPosts vem da pasta api / array-posts */}
@@ -124,6 +130,16 @@ const StyledCategorias = styled.div`
 
     &:hover {
       background-color: var(--cor-primaria-fundo-hover);
+    }
+  }
+
+  .limpar {
+    background-color: #6496c5;
+    &:hover {
+      background-color: slategrey;
+    }
+    &::before {
+      content: "🧹 ";
     }
   }
 `;

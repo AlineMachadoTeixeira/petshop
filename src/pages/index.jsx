@@ -28,6 +28,11 @@ export async function getStaticProps() {
     };
   } catch (error) {
     console.error("Deu ruim:" + error.message);
+
+    /* Esse return  notFound: true é para retorna o erro 404 da pagina404.jsx. Precisa fazer, pois os dados são dinamicos    */
+    return {
+      notFound: true,
+    };
   }
 }
 //posts pegamos da return linha 20 o {posts}

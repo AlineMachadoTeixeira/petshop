@@ -68,8 +68,9 @@ export default function Home({ posts, categorias }) {
         <h2>Pet Notícias</h2>
 
         <div>
-          {categorias.map((categoria) => {
-            return <button>{categoria}</button>;
+          {/* key={indice} é para parar de dar erro no console do navegador */}
+          {categorias.map((categoria, indice) => {
+            return <button key={indice}>{categoria}</button>;
           })}
         </div>
 

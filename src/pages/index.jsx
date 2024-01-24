@@ -49,9 +49,11 @@ export default function Home({ posts, categorias }) {
   //Passa a passo do react-fundamento na parte  produto
   const [listaDePosts, SetListaDePosts] = useState(posts);
 
-  //função para filtrar as categorias quando aperta botão da linha 85 que está StyledCategorias
+  //função para filtrar as categorias(Bem-estar Comportamento) quando aperta botão da linha 85 que está StyledCategorias
   const filtrar = (event) => {
-    const categoriaEscolhida = event.currentTarget.innerText;
+    /* Atenção: utilize  textContent  em vez de innerText, pois textContent captura o texto real do HTML/JSX sem levar em consideração estilo CSS. mudamos no css o  text-transform: capitalize a primeira letra era minuscula e deixamos maiuscula*/
+
+    const categoriaEscolhida = event.currentTarget.textContent;
 
     // esse posts é da função Home
     const novaListaDePosts = posts.filter(
@@ -107,8 +109,10 @@ const StyledCategorias = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 1rem 0;
 
   button {
+    text-transform: capitalize;
     background-color: var(--cor-logo);
     color: var(--cor-primaria);
     padding: 0.5em;

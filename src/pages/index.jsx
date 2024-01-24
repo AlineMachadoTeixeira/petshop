@@ -67,12 +67,12 @@ export default function Home({ posts, categorias }) {
       <StyledHome>
         <h2>Pet Notícias</h2>
 
-        <div>
+        <StyledBotao>
           {/* key={indice} é para parar de dar erro no console do navegador */}
           {categorias.map((categoria, indice) => {
             return <button key={indice}>{categoria}</button>;
           })}
-        </div>
+        </StyledBotao>
 
         {/* arrayPosts vem da pasta api / array-posts */}
         <ListaPosts posts={listaDePosts} />
@@ -84,5 +84,25 @@ export default function Home({ posts, categorias }) {
 const StyledHome = styled.section`
   h2::before {
     content: "📰";
+  }
+`;
+
+const StyledBotao = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+
+  button {
+    background-color: var(--cor-logo);
+    color: var(--cor-primaria);
+    padding: 0.5em;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--sombra-box);
+    border-radius: 5px;
+
+    &:hover {
+      background-color: var(--cor-primaria-fundo-hover);
+    }
   }
 `;

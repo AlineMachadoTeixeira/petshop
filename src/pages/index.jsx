@@ -24,11 +24,15 @@ export async function getStaticProps() {
     const categorias = dados.map((post) => post.categoria);
     console.log(categorias);
 
+    /* Gerando um array de categorias ÚNICAS */
+    const categoriasUnicas = [...new Set(categorias)];
+    console.log(categoriasUnicas);
+
     /* Após o processamento (desde que não haja erros), a getStaticProps retorna um objeto com uma propriedade chamada "props", e nesta propriedade colocamos um objeto com as props que queremos usar. No caso, usamos uma prop "posts" (podemos dar qualquer nome) e é nela que colocamos os dados. */
     return {
       props: {
         posts: dados,
-        categorias: [], //[] array vazio provisorio
+        categorias: categoriasUnicas,
       },
     };
   } catch (error) {
@@ -42,7 +46,6 @@ export async function getStaticProps() {
 }
 //posts pegamos da return linha 20 o {posts}
 export default function Home({ posts, categorias }) {
-  console.log(categorias);
   //Passa a passo do react-fundamento na parte  produto
   const [listaDePosts, SetListaDePosts] = useState(posts);
 
@@ -63,6 +66,13 @@ export default function Home({ posts, categorias }) {
       {/* //Antes era <section> mudamos por causa do css */}
       <StyledHome>
         <h2>Pet Notícias</h2>
+
+        <div>
+          {categorias.map((categoria) => {
+            return <button>{categoria}</button>;
+          })}
+        </div>
+
         {/* arrayPosts vem da pasta api / array-posts */}
         <ListaPosts posts={listaDePosts} />
       </StyledHome>

@@ -134,7 +134,7 @@ Também há a função `getServerSideProps` que pode ser útil para páginas cuj
 
 - `getStaticPaths`: necessário para gerar os caminhos dinâmicos no momento do acesso à página.
 
-### Firebase
+### Migracao API Fake para Firebase-json
 
 - Firebase: webservice de recursos Back-End
 - Entrar no https://firebase.google.com/ com a conta google useia alinepontodecore
@@ -148,7 +148,14 @@ Também há a função `getServerSideProps` que pode ser útil para páginas cuj
 - continuar
 - lado esquerdo
 - vai em criação
-- escolher REaltime DataBase
+- escolher: REaltime DataBase
 - criar banco de dados
+- local deixa ESTADO UNIDOS
+- proximo
+- Escolhe... iniciar no modo de teste (Dura 30 dias )
+- Ativar
+- copie url que é :
+  https://petshop-aline-2024-default-rtdb.firebaseio.com/
 
-https://petshop-aline-2024-default-rtdb.firebaseio.com/
+Conversor de JSON para Firebase
+https://tableconvert.com/json-to-firebase

@@ -5,6 +5,7 @@ import ListaPosts from "@/components/ListaPosts";
 
 import { useState } from "react"; //importação da linha 8 useState(). Primeiro escreve useState
 import serverApi from "./api/server"; // usamos na linha 16
+import ListaCategorias from "@/components/ListaCategorias";
 
 /* EXECUTADA NO SERVIDOR/BACK-END 
             Função getStaticProps 
@@ -104,28 +105,13 @@ export default function Home({ posts, categorias }) {
       <StyledHome>
         <h2>Pet Notícias</h2>
 
-        <StyledCategorias>
-          {categorias.map((categoria, indice) => {
-            return (
-              <button
-                /*  className é para deixar o botão ativado com outra cor quando clicar. O "ativo" é o css  */
-                className={categoria === categoriaAtiva ? "ativo" : ""}
-                onClick={filtrar}
-                /* key={indice} é para parar de dar erro no console do navegador */
-                key={indice}
-              >
-                {categoria}
-              </button>
-            );
-          })}
-
-          {/* //Botão pata Limpeza do filtro de categoria  do botão de cima */}
-          {filtroAtivo && (
-            <button onClick={limparFiltro} className="limpar">
-              Limpar filtro
-            </button>
-          )}
-        </StyledCategorias>
+        <ListaCategorias
+          categorias={categorias}
+          filtrar={filtrar}
+          limparFiltro={limparFiltro}
+          filtroAtivo={filtroAtivo}
+          categoriaAtivo={categoriaAtiva}
+        />
 
         {/* arrayPosts vem da pasta api / array-posts */}
         <ListaPosts posts={listaDePosts} />
@@ -137,42 +123,5 @@ export default function Home({ posts, categorias }) {
 const StyledHome = styled.section`
   h2::before {
     content: "📰";
-  }
-`;
-
-const StyledCategorias = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 1rem 0;
-
-  button {
-    text-transform: capitalize;
-    background-color: var(--cor-logo);
-    color: var(--cor-primaria);
-    padding: 0.5em;
-    border: none;
-    cursor: pointer;
-    box-shadow: var(--sombra-box);
-    border-radius: var(--borda-arredondada);
-    margin: 10px;
-
-    &:hover {
-      background-color: var(--cor-primaria-fundo-hover);
-    }
-
-    &.ativo {
-      background-color: var(--cor-primaria-fundo);
-    }
-  }
-
-  .limpar {
-    background-color: #5e6976;
-    &:hover {
-      background-color: slategrey;
-    }
-    &::before {
-      content: "🧹 ";
-    }
   }
 `;

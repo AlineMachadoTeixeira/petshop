@@ -52,6 +52,9 @@ export default function Home({ posts, categorias }) {
   //Fazer o botão Limpar filtro sumir / só aparecer quando clicamos no botão categorias(Bem-estar Comportamento) ai foi feito a const limparfiltro
   const [filtroAtivo, setFiltroAtivo] = useState(false);
 
+  //Deixar o botão ativo quando clica
+  const [categoriaAtiva, setCategoriaAtiva] = useState("");
+
   //função para filtrar as categorias(Bem-estar Comportamento) quando aperta botão da linha 85 que está StyledCategorias
   const filtrar = (event) => {
     /* Atenção: utilize  textContent  em vez de innerText, pois textContent captura o texto real do HTML/JSX sem levar em consideração estilo CSS. mudamos no css o  text-transform: capitalize a primeira letra era minuscula e deixamos maiuscula*/
@@ -63,10 +66,13 @@ export default function Home({ posts, categorias }) {
       (post) => post.categoria === categoriaEscolhida
     );
 
-    //Fazendo o botão Limpar filtro aparecer  -- Sinalizando o state como filtro ativo (true)
+    // Sinalizando o state como filtro ativo (true) - Fazendo o botão Limpar filtro aparecer
     setFiltroAtivo(true);
 
     SetListaDePosts(novaListaDePosts);
+
+    // Sinalizando o state com o texto/categoria escolhida  - Deixar o botão ativo quando clica
+    setCategoriaAtiva(categoriaEscolhida);
   };
 
   const limparFiltro = () => {
@@ -75,6 +81,9 @@ export default function Home({ posts, categorias }) {
 
     //Atualizando o state da listaDePosts para os posts originais
     SetListaDePosts(posts);
+
+    //Atualizando o state da categoria ativo para vazio
+    setCategoriaAtiva("");
   };
 
   return (
@@ -96,10 +105,15 @@ export default function Home({ posts, categorias }) {
         <h2>Pet Notícias</h2>
 
         <StyledCategorias>
-          {/* key={indice} é para parar de dar erro no console do navegador */}
           {categorias.map((categoria, indice) => {
             return (
-              <button onClick={filtrar} key={indice}>
+              <button
+                /*  className é para deixar o botão ativado com outra cor quando clicar. O "ativo" é o css  */
+                className={categoria === categoriaAtiva ? "ativo" : ""}
+                onClick={filtrar}
+                /* key={indice} é para parar de dar erro no console do navegador */
+                key={indice}
+              >
                 {categoria}
               </button>
             );
@@ -145,6 +159,10 @@ const StyledCategorias = styled.div`
 
     &:hover {
       background-color: var(--cor-primaria-fundo-hover);
+    }
+
+    &.ativo {
+      background-color: var(--cor-primaria-fundo);
     }
   }
 

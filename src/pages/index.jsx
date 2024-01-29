@@ -2,10 +2,10 @@ import Head from "next/head";
 import styled from "styled-components";
 
 import ListaPosts from "@/components/ListaPosts";
+import ListaCategorias from "@/components/ListaCategorias";
 
 import { useState } from "react"; //importação da linha 8 useState(). Primeiro escreve useState
 import serverApi from "./api/server"; // usamos na linha 16
-import ListaCategorias from "@/components/ListaCategorias";
 
 /* EXECUTADA NO SERVIDOR/BACK-END 
             Função getStaticProps 
@@ -106,11 +106,12 @@ export default function Home({ posts, categorias }) {
         <h2>Pet Notícias</h2>
 
         <ListaCategorias
+          /* Recebimento das props -- da ListaCategorias em  components */
           categorias={categorias}
-          filtrar={filtrar}
-          limparFiltro={limparFiltro}
-          filtroAtivo={filtroAtivo}
           categoriaAtivo={categoriaAtiva}
+          onfiltrar={filtrar}
+          onlimparFiltro={limparFiltro}
+          filtroAtivo={filtroAtivo}
         />
 
         {/* arrayPosts vem da pasta api / array-posts */}

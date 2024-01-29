@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export default function ListaCategorias({
+  /* chamada do componentes e passagem props */
   categorias,
-  filtrar,
-  limparFiltro,
-  filtroAtivo,
   categoriaAtivo,
+  /* on  do onfiltrar  onlimparFiltro. Damos on quando é uma função ao clicar no caso aofiltrar aolimparFiltro*/
+  onfiltrar,
+  onlimparFiltro,
+  filtroAtivo,
 }) {
   return (
     <StyledCategorias>
@@ -14,7 +16,7 @@ export default function ListaCategorias({
           <button
             /*  className é para deixar o botão ativado com outra cor quando clicar. O "ativo" é o css  */
             className={categoria === categoriaAtivo ? "ativo" : ""}
-            onClick={filtrar}
+            onClick={onfiltrar}
             /* key={indice} é para parar de dar erro no console do navegador */
             key={indice}
           >
@@ -25,7 +27,7 @@ export default function ListaCategorias({
 
       {/* //Botão pata Limpeza do filtro de categoria  do botão de cima */}
       {filtroAtivo && (
-        <button onClick={limparFiltro} className="limpar">
+        <button onClick={onlimparFiltro} className="limpar">
           Limpar filtro
         </button>
       )}

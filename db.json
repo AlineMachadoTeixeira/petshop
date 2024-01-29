@@ -66,10 +66,10 @@
 
     {
       "id": 10,
-      "titulo": "Phellypheh precisa de atenção",
-      "subtitulo": "Uma gata que odeia carinho e interação",
-      "descricao": "Banhos regulares mantém os pelos e pele de seu cachorro limpa, renovada e saudável. O processo de ensaboar e escovar remove resíduos de pelos e peles que já estão mortas, providenciando um maior respiro da pele de seu cachorro",
-      "categoria": "reprovado"
+      "titulo": "Por que adotar um pet?",
+      "subtitulo": "Projeto de adoção de pets da Vivo",
+      "descricao": "Além de ajudar a diminuir a população de cães e gatos nas ruas, você ainda ganha um amigo fiel para toda hora. Ter em casa um cachorro ou um gato pode ser muito benéfico para sua vida porque além de ótimas companhias, o convívio com esses animais cria vínculos de afeto e confiança.",
+      "categoria": "Adoção"
     }
   ]
 }

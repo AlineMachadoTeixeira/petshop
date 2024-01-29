@@ -10,6 +10,7 @@ n dev
 - cd.. --> volta algumas pastas ou uma pasta
 - ctrl +C --> para parar o CMD ou qualquer
 - atalho windows mais .(ponto) trás opções de Ícones/emojis
+- no NODEJS `npm run api`
 
 # PetShop: projeto Next.js
 

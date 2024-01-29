@@ -133,3 +133,22 @@ Também há a função `getServerSideProps` que pode ser útil para páginas cuj
 - `getStaticProps`: necessário para carregar os dados da API de acordo com o parâmetro (usando a prop `{params}`) e gerar o HTML via SSR
 
 - `getStaticPaths`: necessário para gerar os caminhos dinâmicos no momento do acesso à página.
+
+### Firebase
+
+- Firebase: webservice de recursos Back-End
+- Entrar no https://firebase.google.com/ com a conta google useia alinepontodecore
+- começar
+- criar o projeto
+- dar nome (dei o nome de petshop-aline-2024)
+- continuar
+- desative o Ativar o Google Analytics neste projeto
+- criar projeto
+- aguardar
+- continuar
+- lado esquerdo
+- vai em criação
+- escolher REaltime DataBase
+- criar banco de dados
+
+https://petshop-aline-2024-default-rtdb.firebaseio.com/

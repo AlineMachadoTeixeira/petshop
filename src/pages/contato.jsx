@@ -53,35 +53,41 @@ export default function Contato() {
           >
             <div>
               <label htmlFor="nome">Nome:</label>
-              <input type="text" name="nome" id="nome" />
-              <input {...register("nome")} type="text" name="nome" id="nome" />
+              <input
+                {...register("nome")}
+                type="text"
+                name="nome"
+                id="nome"
+                required
+              />
             </div>
             <div>
               <label htmlFor="email">E-mail:</label>
-              <input type="email" name="email" id="email" />
               <input
                 {...register("email")}
                 type="email"
                 name="email"
                 id="email"
+                required
               />
             </div>
 
             <div>
-              <label htmlFor="mensagem">
-                Mensagem: <br />
+              <label htmlFor="menssagem">
+                Menssagem: <br />
               </label>
               <textarea
-                maxLength={500}
+                {...register("mensagem")}
                 name="mensagem"
                 id="mensagem"
+                maxLength={500}
                 cols="30"
-                rows="8"
+                rows="10"
+                required
               ></textarea>
             </div>
-
             <div>
-              <button type="submit">Enviar mensagem</button>
+              <button type="submit">Enviar menssagem</button>
             </div>
           </form>
         </Container>
@@ -92,10 +98,10 @@ export default function Contato() {
 
 const StyledContato = styled.section`
   h2::before {
-    content: "💌";
+    content: "💌 ";
   }
 
-  // Início Formulário
+  // Inicio Formulário
 
   form > div {
     margin-bottom: 0.5rem;
@@ -118,15 +124,11 @@ const StyledContato = styled.section`
     }
 
     & button {
-      background-color: var(--cor-logo);
+      background-color: var(--cor-primaria-fundo);
       color: var(--cor-primaria);
       padding: 1rem;
       border: none;
       cursor: pointer;
-
-      &:hover {
-        background-color: var(--cor-primaria-fundo-hover);
-      }
     }
   }
 

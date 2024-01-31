@@ -36,6 +36,7 @@ export async function getStaticProps() {
         id: post,
       };
     });
+    console.log(arrayDePosts);
 
     /* Extraindo as categorias dos posts para um novo array */
     // TIREI ESSE PELA FALTA 30/01 const categorias = dados.map((post) => post.categoria);

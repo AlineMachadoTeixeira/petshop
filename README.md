@@ -159,3 +159,34 @@ Também há a função `getServerSideProps` que pode ser útil para páginas cuj
 
 Conversor de JSON para Firebase
 https://tableconvert.com/json-to-firebase
+
+## Branch 19-migração-api-fakepara-firebase-json
+
+### Firebase https://firebase.google.com/?hl=pt
+
+Firebase é uma plataforma de serviços web (Web Services), com uma serie de funcionalidades de back-end uteis para aplicações (web, apps, jogos).
+
+no caso de PetShop Criamos um projeto Firebase e nele adicionamos um banco de dados chamado "Firebase Realtime Database" para utilização como API JSON
+
+O Realtime Database é um banco de dados `NoSQL`, ou seja, um banco de dados **Não Relacional**. Ele é baseado em documentos no formato JSON contendo objetos de dados
+
+### Para testar a API
+
+- usar a extensão ThunderClient
+- o icone é um raio roxo
+
+### Lembrete sobre uso de Apis
+
+Como set trata de uma API JSON, podemos utilizamos qualquer um do verbos HTTP para o consumo de APIs no padrâo REST:
+
+- GET: ler, obter dados
+- POST: Criar, inserir
+- PUT: atualizar tudo
+- PATCH: atualizar parcialmente
+- DELETE: excluir
+
+### Ajustes necessarios para aplicação usar a API Firebase JSON
+
+- Em `index.jsx`, Alterar a getStaticProps ajustando o endpoint para `posts.json` e gerando do um novo array com os posts/objetos carre gados a partir de `CONST dados`
+
+- Em `[id].jsx`, Alterar a getStaticProps ajustando o endpoint para `posts/id.jsx`

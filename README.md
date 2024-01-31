@@ -197,7 +197,7 @@ https://vercel.com/ use esse site
 
 https://petshop-eta-five.vercel.app/ site do petShop
 
-### Instagar next.Js
+### Instalação next.Js
 
 npx create-next-app@latest
 

@@ -196,3 +196,19 @@ Como set trata de uma API JSON, podemos utilizamos qualquer um do verbos HTTP pa
 https://vercel.com/ use esse site
 
 https://petshop-eta-five.vercel.app/ site do petShop
+
+### Instagar next.Js
+
+npx create-next-app@latest
+
+2. ... e siga as instruções:
+1. Dar nome ao projeto
+1. Usar Typescript? (não)
+1. Usar ESLint? (não)
+1. Usar Tailwind? (não)
+1. Usar diretório src? (sim)
+1. Usar App Router? (não)
+1. Customizar o alias? (não)
+1. Aguardar o término e escreve
+   cd nome-projeto para entrar na pasta do projeto depois
+   npm run dev

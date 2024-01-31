@@ -190,3 +190,9 @@ Como set trata de uma API JSON, podemos utilizamos qualquer um do verbos HTTP pa
 - Em `index.jsx`, Alterar a getStaticProps ajustando o endpoint para `posts.json` e gerando do um novo array com os posts/objetos carre gados a partir de `CONST dados`
 
 - Em `[id].jsx`, Alterar a getStaticProps ajustando o endpoint para `posts/id.jsx`
+
+### Publicação
+
+https://vercel.com/ use esse site
+
+https://petshop-eta-five.vercel.app/ site do petShop

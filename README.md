@@ -199,6 +199,8 @@ https://petshop-aline.vercel.app// site do petShop
 
 ### Instalação next.Js
 
+No command prompt
+
 npx create-next-app@latest
 
 2. ... e siga as instruções:

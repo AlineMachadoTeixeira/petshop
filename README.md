@@ -172,7 +172,7 @@ O Realtime Database é um banco de dados `NoSQL`, ou seja, um banco de dados **N
 
 ### Para testar a API
 
-- usar a extensão ThunderClient
+- usar a extensão ThunderClient NO visual
 - o icone é um raio roxo
 
 ### Lembrete sobre uso de Apis

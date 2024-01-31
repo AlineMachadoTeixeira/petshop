@@ -195,7 +195,7 @@ Como set trata de uma API JSON, podemos utilizamos qualquer um do verbos HTTP pa
 
 https://vercel.com/ use esse site
 
-https://petshop-eta-five.vercel.app/ site do petShop
+https://petshop-aline.vercel.app// site do petShop
 
 ### Instalação next.Js
 

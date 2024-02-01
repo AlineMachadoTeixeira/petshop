@@ -205,7 +205,7 @@ Como set trata de uma API JSON, podemos utilizamos qualquer um do verbos HTTP pa
 
 Arquivo chamado `manifest.json` com informações gerais sobre o aplicativo: nome, descrição, ícones, cores etc.
 
-No caso do Next.js, este arquivo deve ser colocado na pasta `public` e adicionado via `meta tag` na página `_document.js`.
+No caso do Next.js, este arquivo deve ser colocado na pasta `public` e adicionado via `meta tag` na página `_document.js` dentro do `<head>`.
 
 2. Criar/Configurar um Service Worker (JavaScript)
 
